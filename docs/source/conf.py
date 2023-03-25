@@ -17,6 +17,7 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.autosummary',
     'sphinx.ext.intersphinx',
+    'myst_parser',
 ]
 
 intersphinx_mapping = {
@@ -28,7 +29,13 @@ intersphinx_disabled_domains = ['std']
 templates_path = ['_templates']
 
 # -- Options for HTML output
-
+html_context = {
+    "display_github": True, # Integrate GitHub
+    "github_user": "lacus-w", # Username
+    "github_repo": "Essential-MySQL", # Repo name
+    "github_version": "master", # Version
+    "conf_py_path": "/docs/source/", # Path in the checkout to the docs root
+}
 html_theme = 'sphinx_rtd_theme'
 
 # -- Options for EPUB output
